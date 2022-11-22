@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gridContenedor{
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 120px 100px auto auto 200px;
+
+    /*------GRID-TEMPLATE-AREAS------*/
+
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "aside aside aside"
+    "footer footer footer"
+    ;
+
+}
+
+/*------HEADER------*/
+
+.header{
+    grid-area: header;
+}
+
+.navHeader{
+    grid-area: nav;
+}
+
+
+
+/*------MAIN------*/
+
+.main{
+    grid-area: main;
+
+}
+
+/*------FOOTER------*/
+
+.footer{
+    grid-area: footer;
+}
