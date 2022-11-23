@@ -124,6 +124,7 @@
 .productos .productosDestacados div img{
     width: 330px;
     height: 300px;
+    top: 0;
 }
 
 .productos .productosDestacados div h3{
