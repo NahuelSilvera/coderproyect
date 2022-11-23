@@ -8,46 +8,161 @@
     width: 100%;
     margin: 0 auto;
     color: black;
-    font-size: 40px;
+    font-size: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 120px 100px auto auto 200px;
+    grid-template-rows: 100px auto auto 150px;
 
     /*------GRID-TEMPLATE-AREAS------*/
 
     grid-template-areas: 
     "header header header"
-    "nav nav nav"
     "main main main"
     "aside aside aside"
     "footer footer footer"
     ;
-
 }
 
 /*------HEADER------*/
 
 .header{
     grid-area: header;
+
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.navHeader{
-    grid-area: nav;
+.header a{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.header .navHeader nav ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.header .navHeader nav ul li a{
+    margin: 10px;
+    padding: 30px;
+    text-decoration: none;
+    color: white;
 }
 
 
 
 /*------MAIN------*/
 
-.main{
+.mainHero{
     grid-area: main;
 
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image: url("../img/hero-fondo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*------ASIDE------*/
+
+.aside{
+    grid-area: aside;
+}
+
+.informacion .informacionContenedor{
+    text-align: center;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.informacion .informacionContenedor div img{
+    width: 250px;
+    height: 250px;
+}
+
+/*------PRODUCTOS------*/
+
+.productos h2{
+    text-align: center;
+}
+
+.productos .productosDestacados{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.productos .productosDestacados div{
+    width: 330px;
+    height: 400px;
+    border: 1px solid rgb(110, 109, 109);
+    text-align: center;
+    margin: 35px;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.73);
+    -webkit-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.73);
+    -moz-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.73);
+}
+
+.productos .productosDestacados div img{
+    width: 300px;
+    height: 300px;
+}
+
+.productos .productosDestacados div h3{
+    padding: 10px;
+}
+
+.productos .productosDestacados div a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
 }
 
 /*------FOOTER------*/
 
 .footer{
     grid-area: footer;
+
+    background-color: rgb(0, 0, 0) ;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .navFooter ul li{
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+}
+.footer .navFooter ul li a{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+.footer .redesSociales img{
+    width: 30px;
+    height: 30px;
 }
