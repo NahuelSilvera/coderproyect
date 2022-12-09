@@ -1,0 +1,32 @@
+@import "../base/variables";
+
+.header{
+    grid-area: header;
+    background-color: $color-negro;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    @extend %flex;
+    a{
+        margin: 10px;
+        text-decoration: none;
+        color: $color-blanco;
+    }
+    .navHeader{
+        nav{
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                li{
+                    a{
+                        margin: 10px;
+                        padding: 30px;
+                        text-decoration: none;
+                        color: $color-blanco;
+                    }
+                }
+            }
+        }
+    }
+}

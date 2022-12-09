@@ -1,0 +1,18 @@
+$color-negro: black;
+$color-blanco: white;
+$color-gris: #6e6d6d;
+$color-azul: rgba(30, 85, 250, 0.47);
+
+%flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex($flex, $direction, $justify, $align){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;    
+}
