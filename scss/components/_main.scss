@@ -162,10 +162,10 @@
         padding: 300px;
         @extend %flex;
     }
-    p{
-        background-color: $color-negro;
-        padding: 25px;
-    }
+        p{
+            background-color: $color-negro;
+            padding: 25px;
+        }
     .nosotros2{
         background-color: $color-negro;
         display: flex;
